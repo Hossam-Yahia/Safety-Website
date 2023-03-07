@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+:root {
+    --section-color: #ececec;
+    --font-color: #222831;
+    --main-color: #2196f3;
+    --main-transetion: 0.3s;
+    --section-padding: 100px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;                       
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+form :focus {
+    outline: 0;
+}
+
+form input{
+    border: 0;
+}
+
+.message-container {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+}
+
+.message {
+    display: flex;
+    font-size: 18px;
+    min-width: 350px;
+    width: max-content;
+    padding: 10px 30px 10px 10px;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--font-color);
+    margin-top: 15px;
+    position: relative;
+}
+
+.message.error {
+    border-left: #f44336 5px solid;
+}
+
+.message.success {
+    border-left: var(--main-color) 5px solid;
+}
+
+.message h1{
+    font-size: inherit;
+    color: white;
+}
+
+.message.error i:first-child {
+    color: #f44336;
+}
+
+.message.success i:first-child{
+    color: var(--main-color);
+}
+
+.message i:last-child{
+    color: #9999 !important;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.page-title {
+    color: var(--font-color);
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 32px !important;
+    }
+}
+/*-------------------------------header start-------------------------------*/
+header {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.155);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    position: relative;
+}
+
+header .container .logo{
+    color: var(--font-color);
+    font-weight: bolder;
+    font-size: 28px;
+}
+
+header .container .logo span{
+    color: var(--main-color);
+}
+
+.links {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+header .container .links ul{
+    display: flex;
+}
+
+header .container .links ul a{
+    display: block;
+    color: var(--font-color);
+    font-size: 17px;
+    padding: 15px;
+    transition: var(--main-transetion) color, var(--main-transetion) background-color,var(--main-transetion) padding;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 85px;
+}
+
+header .container .links li.togel-menu {
+    position: relative;
+}
+
+header .container .links li.togel-menu:hover ul{
+    display: flex;
+}
+
+header .container .links li.togel-menu ul {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: max-content;
+}
+
+header .container .links li.togel-menu ul a{
+    height: fit-content;
+    background-color: var(--section-color);
+}
+
+
+header .container .links ul a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    top: 0;
+    left: 0;
+    transition: var(--main-transetion) width;
+}
+
+header .container .links ul a.active {
+    color: var(--main-color);
+    background-color: #f9f9f9;
+}
+
+header .container .links ul a.active::before {
+    width: 100%;
+}
+
+header .container .links ul a:hover::before{
+    width: 100%;
+}
+
+header .container .links ul a:hover{
+    color: var(--main-color);
+    background-color: #f9f9f9;
+}
+
+header .container .btn{
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 18px;
+    padding: 5px 10px;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    border: var(--main-color) 2px solid;
+    box-shadow: inset 0 0 10px #00acb556, 0 0 10px #00acb556;
+    transition: var(--main-transetion) background-color, var(--main-transetion) color;
+}
+
+header .container .btn:hover{
+    background-color: var(--main-color);
+    color: var(--section-color);
+}
+
+header .container .nav-icon{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    height: 20px;
+    width: 25px;
+    cursor: pointer;
+}
+
+header .container .nav-icon:hover span:nth-child(2){ 
+    width: 100%;
+}
+
+header .container .nav-icon span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 10px #00acb5c7;
+}
+
+header .container .nav-icon span:nth-child(2){
+    width: 55%;
+    transition: var(--main-transetion) width;
+}
+/*-------------------------------header end-------------------------------*/
+/*-------------------------------form start-------------------------------*/
+    .add-certificate {
+        padding: 60px 30px;
+        background: linear-gradient(30deg, rgba(33,150,243,1) 0%, rgba(24,95,152,1) 100%);
+        margin: 0 auto;
+    }
+
+    .add-certificate form input[type=text],
+    .add-certificate form select,
+    .add-certificate form button{
+        padding: 6px;
+        height: 30px;
+        border: 0;
+    }
+
+    .add-certificate form {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+/*-------------------------------form end-------------------------------*/
+/*-------------------------------table start-------------------------------*/
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.083);
+    }
+    
+      td, th {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.083);
+        text-align: center;
+        padding: 15px;
+    }
+
+    tr:first-child th{
+        background-color: var(--main-color);
+        color: white;
+    }
+    
+    th:nth-child(even) {
+        background-color: #2195f322;
+    }
+
+    .table-container {
+        margin-top: 30px;
+    }
+
+    .table-container .btn{
+
+    }
+
+    .table-container .btn a{
+        font-size: 20px;
+        background: var(--main-color);
+        border: 0;
+        cursor: pointer;
+        padding: 5px 10px;
+        color: white;
+        margin-right: 10px;
+        transition: var(--main-transetion) background;
+    }
+
+    .table-container .btn a:hover{
+        background-color: var(--font-color);
+    }
+
+    .table-container .btn i{
+        font-size: 20px;
+        color: white;
+    }
+/*-------------------------------table end-------------------------------*/

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. Yahia</title>
+    <link rel="stylesheet" href="../css/control-panal.css">
+    <link rel="stylesheet" href="../css/control-panal-media.css">
+    <link rel="stylesheet" href="../css/all.css">
+        <!--fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><span>Welcome</span> to control panal</div>
+            <div class="nav">
+                <div class="nav-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a class="active" href="#">Add certificate</a></li>
+                        <li class="togel-menu">
+                            <a href="#about">certificates</a>
+                            <ul>
+                                <li><a href="osha.html">OSHA</a></li>
+                                <li><a href="risk-assessment.html">risk assessment</a></li>
+                                <li><a href="iosh.html">IOSH</a></li>
+                                <li><a href="lifting-awarness.html">lifting awarness</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a class="btn" href="../home-page.html">go to website</a>   
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="add-certificate">
+        <div class="container">
+            <form action="">
+                <input type="text" name="name" placeholder="name">
+                <input type="text" name="number" placeholder="certificate number">
+                <input type="text" name="number" placeholder="traning center">
+                <select name="course" id="" placeholder="courses">
+                    <option value="" disabled selected>choose a course</option>
+                    <option value="OSHA">OSHA</option>
+                    <option value="Risk Assessment">Risk Assessment</option>
+                    <option value="IOSH Managing Safely">IOSH Managing Safely</option>
+                    <option value="Lifting Awarenss For Safety Professionals">Lifting Awarenss For Safety Professionals</option>
+                </select>
+                <button type="submit">add certificate</button>
+            </form>
+        </div>
+    </section>
+    <div class="message-container">
+        <div class="message error" id="error">  
+            <i class="fa-solid fa-circle-xmark"></i>
+            <h1>Lorem ipsum dolor sit.</h1>
+            <a onclick="y()"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+
+        <div class="message success" id="success">
+            <i class="fa-solid fa-circle-check"></i>
+            <h1>Lorem ipsum dolor sit.</h1>
+            <a onclick="x()"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+    </div>
+
+    <script>
+        function x() {
+            const message = document.getElementById('success');
+            message.remove();
+        }
+
+        function y() {
+            const message = document.getElementById('error');
+            message.remove();
+        }
+    </script>
+</body>
+</html>

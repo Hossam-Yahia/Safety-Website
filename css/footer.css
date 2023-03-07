@@ -1,0 +1,104 @@
+:root {
+    --section-color: #ececec;
+    --font-color: #222831;
+    --main-color: #2196f3;
+    --main-transetion: 0.3s;
+    --section-padding: 100px;
+}
+
+
+footer {
+    background-color: var(--font-color);
+    color: #EEEEEE;
+    padding: 30px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 50px;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+footer div :not(.social-icon) li a {
+    color: inherit;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    transition: var(--main-transetion) padding;
+    border-bottom: 1px solid #fdfdfd5d;
+}
+
+footer div :not(.social-icon) li a:hover {
+    padding-left: 20px;
+}
+
+footer div :not(.social-icon) li a::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\F101";
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--main-color);
+}
+
+footer div :not(.social-icon) ul{
+    margin-bottom: 30px;
+}
+
+footer .btn{
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 5px 10px;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    border: var(--main-color) 2px solid;
+    box-shadow: inset 0 0 10px #00acb556, 0 0 10px #00acb556;
+    transition: var(--main-transetion) background-color, var(--main-transetion) color;
+    background-color: var(--main-color);
+    color: var(--section-color);
+    margin-top: 25px;
+}
+
+footer .btn:hover{
+    color: var(--main-color);
+    background: 0;
+}
+
+.copy-right {
+    color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #fdfdfd5d;
+    background-color: var(--font-color);
+    padding: 20px;
+}
+
+footer .logo{
+    color: var(--section-color);
+    font-weight: bolder;
+    font-size: 28px;
+}
+
+footer .logo span{
+    color: var(--main-color);
+}
+
+footer .social-icon{
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+footer .social-icon i{
+    margin: 5px;
+    color: #EEEEEE;
+    font-size: 32px;
+    transition: var(--main-transetion) color, var(--main-transetion) box-shadow;
+}
+
+footer .social-icon i:hover {
+    color: var(--main-color);
+    box-shadow: inset 1px 1px 7px 2px #00acb53b, 0 0 18px #00acb589;
+}

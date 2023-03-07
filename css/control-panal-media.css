@@ -1,0 +1,109 @@
+/*------------------------start container----------------------------*/
+@media (min-width: 600px) {
+    .container {
+        width: 600px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 730px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 900px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1050px;
+    }
+}
+/*------------------------------------end container -------------------------------*/
+/*------------------------start header----------------------------*/
+@media (max-width: 768px) {
+    header .container .nav-icon{
+        display: flex;
+    }
+
+    header .container .nav:hover .links{
+        display: block;
+    }
+
+    header .container .btn{
+        display: block;
+        margin: 20px auto;
+    }
+
+    header .container .links{
+        position: absolute;
+        top: 85%;
+        display: none;
+        right: 0;
+        width: 300px;
+        background-color: #ececec;
+        flex-direction: column;
+        gap: 0;
+        z-index: 100;
+    }
+
+    header .container ul{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header .container ul::before{
+        content: "";
+        position: absolute;
+        top: -20px;
+        right: 20px;
+        width: 0;
+        height: 0;
+        border: 10px solid;
+        border-color: transparent transparent #ececec transparent;
+    }
+
+    header .container .links ul a:hover{
+        padding-left: 23px;
+    }
+
+    header .container .links ul a{
+        height: fit-content;
+    }
+}
+/*------------------------end header----------------------------*/
+/*------------------------start landing----------------------------*/
+@media (max-width: 992px) {
+    .landing .container {
+        justify-content: center;
+    }
+    .landing .container .text{
+        width: 80%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .landing .container .img{
+        display: none;
+    }
+
+    .landing .container .social-icon{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 50px;
+        top: 0;
+        transform: translateY(0);
+        left: 0;
+    }
+}
+/*------------------------end landing----------------------------*/
+/*------------------------start about----------------------------*/
+
+@media (max-width:993px){
+
+}
